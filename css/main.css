@@ -201,19 +201,31 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.staff-grid .staff-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
 .staff-grid .staff-card img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  object-fit: cover;
 }
+
 .staff-grid .staff-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #114AA3;
 }
+
 .staff-grid .staff-card p {
   color: #666666;
+  margin: 0.5rem 0;
 }
 
 .academic-list {
@@ -241,6 +253,113 @@ body {
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.offer-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.offer-card-content {
+  padding: 1.5rem;
+}
+
+.offer-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #114AA3;
+}
+
+.offer-card p {
+  color: #666666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-wrapper {
+  flex: 1;
+  min-width: 280px;
+}
+
+.academic-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.academic-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.academic-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.academic-card-content {
+  padding: 1.5rem;
+}
+
+.academic-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #114AA3;
+}
+
+.academic-card p {
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .contact-form {
@@ -454,6 +573,24 @@ body {
   }
   .section {
     padding: 2rem 1rem;
+  }
+  
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .academic-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .contact-image,
+  .contact-form-wrapper {
+    min-width: 100%;
   }
 }
 

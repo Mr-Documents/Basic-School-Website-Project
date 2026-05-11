@@ -49,8 +49,12 @@ document.addEventListener('submit', function(e) {
 // Dynamic copyright year
 document.addEventListener('DOMContentLoaded', function() {
     const year = new Date().getFullYear();
-    const footerCopyright = document.querySelector('.footer p:last-child');
+    const footerCopyright = document.querySelector('.footer-copyright p');
     if (footerCopyright) {
         footerCopyright.innerHTML = `&copy; ${year} Nana Kotaa School Complex. All rights reserved.`;
+        // Apply centering and spacing to ensure it sits at the bottom
+        footerCopyright.style.textAlign = 'center';
+        footerCopyright.style.width = '100%';
+        footerCopyright.style.marginTop = '2rem';
     }
 });
