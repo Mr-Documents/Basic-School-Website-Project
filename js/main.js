@@ -45,3 +45,12 @@ document.addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Thank you for your message! We will get back to you soon.');
 });
+
+// Dynamic copyright year
+document.addEventListener('DOMContentLoaded', function() {
+    const year = new Date().getFullYear();
+    const footerCopyright = document.querySelector('.footer p:last-child');
+    if (footerCopyright) {
+        footerCopyright.innerHTML = `&copy; ${year} Nana Kotaa School Complex. All rights reserved.`;
+    }
+});
