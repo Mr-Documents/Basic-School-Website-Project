@@ -316,6 +316,7 @@ body {
 .footer-links {
   flex: 1;
   text-align: left;
+  min-width: 200px;
 }
 
 .footer-links h3 {
