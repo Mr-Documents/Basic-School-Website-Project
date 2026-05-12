@@ -472,20 +472,34 @@ img {
 }
 
 .contact-image {
-  flex: 1;
-  min-width: 280px;
+  flex: 0 0 260px;
+  min-width: 220px;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-image img {
   width: 100%;
+  max-width: 260px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .contact-form-wrapper {
   flex: 1;
   min-width: 280px;
+}
+
+.contact-details {
+  max-width: 520px;
+  margin: 1.5rem auto 0;
+  color: #4E4E4E;
+  line-height: 1.8;
+}
+
+.contact-details p {
+  margin: 0.6rem 0;
 }
 
 .academic-cards {
