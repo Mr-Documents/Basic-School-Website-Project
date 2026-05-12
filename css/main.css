@@ -11,6 +11,12 @@ body {
   line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .btn, .contact-form form button {
   background: #114AA3;
   color: #FFFFFF;
@@ -182,10 +188,36 @@ body {
   text-align: center;
 }
 .section p {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
   text-align: center;
   color: #666666;
+}
+
+.staff-hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.staff-hero-text p {
+  margin: 0 0 1rem;
+}
+
+.staff-hero-text .hero-details h3 {
+  margin-top: 1.25rem;
+}
+
+.staff-hero-text .hero-details p {
+  margin: 0.4rem 0 0;
+  color: #777777;
+  line-height: 1.6;
+}
+
+.staff-hero-image {
+  width: 100%;
 }
 
 .staff-grid {
@@ -194,12 +226,17 @@ body {
   gap: 2rem;
   max-width: 1200px;
   margin: 2rem auto;
+  padding: 0 1rem;
 }
 .staff-grid .staff-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background: #FFFFFF;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -210,22 +247,130 @@ body {
 }
 
 .staff-grid .staff-card img {
-  width: 100px;
-  height: 100px;
+  width: clamp(100px, 12vw, 120px);
+  height: clamp(100px, 12vw, 120px);
   border-radius: 50%;
   margin-bottom: 1rem;
   object-fit: cover;
 }
 
-.staff-grid .staff-card h3 {
+.leadership-grid .staff-card img {
+  width: 100%;
+  max-width: 240px;
+  min-width: 180px;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  margin: 0 auto 1.25rem;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .leadership-grid .staff-card img {
+    max-width: 260px;
+  }
+}
+
+.staff-hero-text {
+  max-width: 640px;
+}
+
+.staff-hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.staff-hero-text .hero-details h3 {
+  margin-top: 1rem;
+  font-size: 1.75rem;
+  color: #114AA3;
+}
+
+.staff-hero-image img {
+  width: 100%;
+  max-height: 640px;
+  min-height: 420px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(17, 74, 163, 0.12);
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-content: center;
+  gap: 1.75rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.leadership-grid .staff-card {
+  align-items: center;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.teacher-section .staff-grid {
+  margin-bottom: 0;
+}
+
+@media (min-width: 900px) {
+  .staff-hero {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .staff-grid .staff-card img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 780px) {
+  .staff-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-hero-image img {
+    max-height: 420px;
+  }
+
+  .staff-hero-text {
+    text-align: center;
+  }
+
+  .staff-hero-text .hero-details h3,
+  .staff-hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.staff-grid .staff-card h3,
+.staff-grid .staff-card p,
+.leadership-grid .staff-card h3,
+.leadership-grid .staff-card p {
+  text-align: center;
+  width: 100%;
+}
+
+.staff-grid .staff-card h3,
+.leadership-grid .staff-card h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: #114AA3;
 }
 
 .staff-grid .staff-card p {
   color: #666666;
-  margin: 0.5rem 0;
+  margin: 0.55rem 0;
+  line-height: 1.6;
+}
+
+.staff-grid .staff-card p strong {
+  color: #1E1E1E;
 }
 
 .academic-list {
