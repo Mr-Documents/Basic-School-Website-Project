@@ -6,7 +6,7 @@
     <title>Staff - Nana Kotaa School Complex</title>
     <link rel="stylesheet" href="css/main.css">
     <style>
-        /* Enhanced responsive layout for Staff Hero */
+        /* Made an internal sizing to make leadership images 'very almost' as big as the proprietor, was having issues with external css here */
         .staff-hero {
             display: flex;
             align-items: center;
@@ -20,23 +20,22 @@
         .staff-hero-image { flex: 1; display: flex; justify-content: center; }
         .staff-hero-image img {
             width: 100%;
-            max-width: 480px; /* Proprietor base size */
+            max-width: 480px; /* Proprietor Size */
             height: auto;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        /* Leadership section image sizing and alignment */
         .leadership-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 2.5rem;
             justify-items: center;
             margin-top: 2rem;
         }
         .leadership-section .staff-card {
             width: 100%;
-            max-width: 460px;
+            max-width: 460px; /* Container big enough for the image */
             text-align: center;
         }
         .leadership-section .staff-card img {
@@ -45,6 +44,7 @@
             height: auto;
             border-radius: 10px;
             margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         @media (max-width: 768px) {
@@ -52,6 +52,7 @@
             .staff-hero-text { min-width: 100%; }
             .leadership-grid { grid-template-columns: 1fr; }
             .hero-details h3 { text-align: center; }
+            .leadership-section .staff-card { max-width: 100%; }
         }
     </style>
 </head>
@@ -85,7 +86,7 @@
                 <h2>School Proprietor</h2>
                 <p>Introducing the proprietor of Nana Kotaa School Complex, whose vision and guidance shape our school community and support every student’s journey.</p>
                 <div class="hero-details">
-                    <h3 style="text-align: center;"> Nancy Nana Kotaa Owusu</h3>
+                    <h3>Nancy Nana Kotaa Owusu</h3>
                     <p><strong>Proprietor</strong></p>
                     <p>Committed to creating a welcoming, safe, and inspiring environment for every learner.</p>
                 </div>
