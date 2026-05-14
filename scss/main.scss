@@ -223,7 +223,7 @@ img {
 // Academic Hero Styles
 .academic-hero {
   background-color: #2c3e50; // Fallback color if image fails to load
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/bookcase-books-bookshelf.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/bookcase-books-bookshelf-1370295.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -505,12 +505,40 @@ img {
 // Responsive
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+    position: relative;
+
+    .menu-toggle {
+      display: inline-flex;
+      z-index: 1001;
+    }
 
     .nav-links {
-      gap: 1rem;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100vh;
+      flex-direction: column;
+      background: $white;
+      padding: 5rem 2rem 2rem;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+      z-index: 1000;
+      gap: 0;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      li {
+        width: 100%;
+        a {
+          display: block;
+          padding: 1rem 0;
+          border-bottom: 1px solid #f0f0f0;
+        }
+      }
     }
   }
 
