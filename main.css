@@ -556,14 +556,13 @@ img {
 .footer {
   background: #1E1E1E;
   color: #FFFFFF;
-  padding: 2rem;
   text-align: left;
+  padding: 2rem;
 }
 
 .footer-logo-image {
   display: flex;
   align-items: center;
-  margin-right: 3rem;
   flex-shrink: 0;
 }
 
@@ -631,8 +630,10 @@ img {
 }
 
 .footer-message {
-  flex: 1;
-  text-align: left;
+  flex: 0 1 auto;
+  max-width: 400px;
+  margin-left: auto;
+  text-align: right;
 }
 
 .footer-message p {
@@ -645,7 +646,7 @@ img {
   margin-top: 2rem;
   border-top: 1px solid #333;
   padding-top: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -664,6 +665,8 @@ img {
   .footer-links,
   .footer-message {
     text-align: center;
+    max-width: 100%;
+    margin-left: 0;
   }
 }
 
