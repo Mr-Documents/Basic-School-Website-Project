@@ -5,59 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff - Nana Kotaa School Complex</title>
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        /* Made an internal sizing to make leadership images 'very almost' as big as the proprietor, was having issues with external css here */
-        .staff-hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 3rem;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .staff-hero-text { flex: 1; min-width: 300px; }
-        .staff-hero-image { flex: 1; display: flex; justify-content: center; }
-        .staff-hero-image img {
-            width: 100%;
-            max-width: 480px; /* Proprietor Size */
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2.5rem;
-            justify-items: center;
-            margin-top: 2rem;
-        }
-        .leadership-section .staff-card {
-            width: 100%;
-            max-width: 460px; /* Container big enough for the image */
-            text-align: center;
-            background: none;
-            box-shadow: none;
-            padding: 0;
-        }
-        .leadership-section .staff-card img {
-            width: 100%;
-            max-width: 440px; /* Almost as big as proprietor (480px) */
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 768px) {
-            .staff-hero { flex-direction: column; text-align: center; }
-            .staff-hero-text { min-width: 100%; }
-            .leadership-grid { grid-template-columns: 1fr; }
-            .hero-details h3 { text-align: center; }
-            .leadership-section .staff-card { max-width: 100%; }
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -100,52 +47,52 @@
         </div>
     </section>
 
-    <section class="section light-blue leadership-section">
-        <h2>Leadership Team</h2>
-        <p>Our leadership team brings educational expertise and strong support to every school program.</p>
+    <section class="section light-blue administration-section">
+        <h2>School Administration</h2>
+        <p>Meet the dedicated team overseeing the management and daily operations of our institution.</p>
         <div class="leadership-grid">
             <div class="staff-card fade-in">
                 <img src="images/figure (28).jpg" alt="Headmaster">
                 <h3>Mr. Isaac Amoako</h3>
                 <p><strong>Headmaster</strong></p>
-                <p>Leading the school with clarity, care, and a focus on academic achievement.</p>
+                <p>Oversees academic excellence and institutional growth, ensuring a high-quality educational experience for every student.</p>
             </div>
             <div class="staff-card fade-in">
-                <img src="images/figure (29).jpg" alt="HOD Computing">
-                <h3>Mr. Issah Ali </h3>
-                <p><strong>HOD, Computing & Sports</strong></p>
-                <p>Driving digital learning and preparing students for a sport sucess.</p>
+                <img src="images/figure (34).jpg" alt="Assistant Headmistress">
+                <h3>Ms. Beatrice Atinga</h3>
+                <p><strong>Assistant Headmistress</strong></p>
+                <p>Coordinates daily operations and academic standards while fostering a supportive learning atmosphere for the entire community.</p>
             </div>
         </div>
     </section>
 
-    <section class="section white teacher-section">
-        <h2>Our Teaching Team</h2>
-        <p>Meet the subject specialists who inspire learning across culture, science, maths, arts, and language.</p>
+    <section class="section white academic-staff-section">
+        <h2>Academic & Support Staff</h2>
+        <p>Our experienced faculty and support staff work together to provide a holistic and enriching experience for every student.</p>
         <div class="staff-grid">
             <div class="staff-card fade-in">
-                <img src="images/figure (34).jpg" alt="Culture Teacher">
-                <h3>Linda Asamoah</h3>
-                <p><strong>Teacher</strong></p>
-                <p>Promoting cultural awareness and creative expression across the school.</p>
+                <img src="images/figure (29).jpg" alt="HOD Computing & Sports">
+                <h3>Mr. Issah Ali</h3>
+                <p><strong>HOD, Computing & Sports</strong></p>
+                <p>Leads the integration of technology in learning and promotes physical well-being through competitive athletic programs.</p>
             </div>
             <div class="staff-card fade-in">
-                <img src="images/figure (36).jpg" alt="Maths Teacher">
-                <h3>Mrs. Mavis Nkrumah</h3>
-                <p><strong>Teacher</strong></p>
-                <p>Supporting students to build confidence and problem-solving skills in maths.</p>
+                <img src="images/figure (25).jpg" alt="HOD Mfante & Culture">
+                <h3>Ms. Rita Abbey</h3>
+                <p><strong>HOD, Mfante & Culture Activities</strong></p>
+                <p>Preserves local heritage and language through cultural studies and school-wide traditional activities.</p>
             </div>
             <div class="staff-card fade-in">
-                <img src="images/figure (25).jpg" alt="English Teacher">
-                <h3>Ms. Abigail Osei</h3>
-                <p><strong>Teacher</strong></p>
-                <p>Developing strong literacy, communication, and critical reading abilities.</p>
+                <img src="images/figure (33).jpg" alt="Discipline Affairs">
+                <h3>Mrs. Vida Adu Mensah</h3>
+                <p><strong>Discipline Affairs</strong></p>
+                <p>Ensures a safe and orderly environment by instilling strong moral values and promoting character development.</p>
             </div>
             <div class="staff-card fade-in">
-                <img src="images/figure (33).jpg" alt="Arts Teacher">
-                <h3>Mrs. Mary Adu</h3>
-                <p><strong>Teacher</strong></p>
-                <p>Inspiring creativity and artistic skill through visual and performance arts.</p>
+                <img src="images/figure (36).jpg" alt="Assistant Matron">
+                <h3>Ms. Nancy Haward</h3>
+                <p><strong>Assistant Matron</strong></p>
+                <p>Dedicated to student health and welfare, providing a nurturing presence and support for our learners' daily needs.</p>
             </div>
             <div class="staff-card fade-in">
                 <img src="https://ui-avatars.com/api/?name=Jacob+Atsu&background=EAF2FF&color=114AA3" alt="French Teacher">
