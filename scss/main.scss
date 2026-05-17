@@ -164,8 +164,22 @@ img {
 // Hero
 .hero {
   background: $white;
-  padding: 4rem 2rem;
+  padding: 0;
   text-align: center;
+
+  .hero-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/figure (45).jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 6rem 2rem;
+
+    .hero-content {
+      h1, p {
+        color: $white;
+      }
+    }
+  }
 
   .hero-content {
     max-width: 800px;
@@ -187,7 +201,6 @@ img {
       width: 100%;
       max-width: 500px;
       height: auto;
-      margin-bottom: 2rem;
       margin: 0 auto 2rem;
       border-radius: 8px;
     }
