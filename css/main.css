@@ -194,7 +194,7 @@ img {
 }
 
 .media-hero .hero-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/figure (41).jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/figure (41).png");
 }
 
 .hero-image {
@@ -242,18 +242,10 @@ img {
 
 .staff-hero {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
-}
-@media (min-width: 900px) {
-  .staff-hero {
-    grid-template-columns: 1.2fr 0.8fr;
-    text-align: left;
-  }
 }
 .staff-hero-text {
   max-width: 640px;
@@ -275,22 +267,10 @@ img {
   color: #777777;
   line-height: 1.6;
 }
-@media (max-width: 900px) {
-  .staff-hero-text {
-    margin: 0 auto;
-  }
-}
-.staff-hero-image {
-  display: flex;
-  justify-content: center;
-}
 .staff-hero-image img {
   width: 100%;
-  max-width: 480px;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: block;
 }
 
 .staff-grid, .leadership-grid {
@@ -336,19 +316,12 @@ img {
 }
 
 .leadership-grid {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  justify-items: center;
-}
-.leadership-grid .staff-card {
-  background: transparent;
-  box-shadow: none;
-  max-width: 440px;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 }
 .leadership-grid .staff-card img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .offers-grid, .academic-cards {
