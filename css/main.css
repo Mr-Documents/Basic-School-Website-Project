@@ -193,6 +193,10 @@ img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/figure (15).jpg");
 }
 
+.media-hero .hero-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/figure (41).jpg");
+}
+
 .hero-image {
   width: 100%;
   max-width: 600px;
@@ -238,10 +242,18 @@ img {
 
 .staff-hero {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
+}
+@media (min-width: 900px) {
+  .staff-hero {
+    grid-template-columns: 1.2fr 0.8fr;
+    text-align: left;
+  }
 }
 .staff-hero-text {
   max-width: 640px;
@@ -262,6 +274,15 @@ img {
   margin: 0.4rem 0 0;
   color: #777777;
   line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .staff-hero-text {
+    margin: 0 auto;
+  }
+}
+.staff-hero-image {
+  display: flex;
+  justify-content: center;
 }
 .staff-hero-image img {
   width: 100%;

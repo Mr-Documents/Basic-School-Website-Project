@@ -221,6 +221,13 @@ img {
   }
 }
 
+// Media Page Hero Override
+.media-hero {
+  .hero-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/figure (41).jpg');
+  }
+}
+
 .hero-image {
   width: 100%;
   max-width: 600px;
@@ -274,10 +281,17 @@ img {
 // Staff Hero & Leadership
 .staff-hero {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1.2fr 0.8fr;
+    text-align: left;
+  }
 
   &-text {
     max-width: 640px;
@@ -287,15 +301,24 @@ img {
       h3 { margin-top: 1rem; font-size: 1.75rem; color: $main-blue; }
       p { margin: 0.4rem 0 0; color: #777777; line-height: 1.6; }
     }
+
+    @media (max-width: 900px) {
+      margin: 0 auto;
+    }
   }
 
-  &-image img {
-    width: 100%;
-    max-width: 480px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    display: block;
+  &-image {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: block;
+    }
   }
 }
 
