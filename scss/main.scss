@@ -175,7 +175,7 @@ img {
     padding: 6rem 2rem;
 
     .hero-content {
-      h1, p {
+      h1, h2, p {
         color: $white;
       }
     }
@@ -185,7 +185,7 @@ img {
     max-width: 800px;
     margin: 0 auto;
 
-    h1 {
+    h1, h2 {
       font-size: 3rem;
       margin-bottom: 1rem;
       color: $dark-text;
@@ -196,15 +196,24 @@ img {
       color: $gray-text;
       margin-bottom: 2rem;
     }
-
-    .hero-image {
-      width: 100%;
-      max-width: 500px;
-      height: auto;
-      margin: 0 auto 2rem;
-      border-radius: 8px;
-    }
   }
+}
+
+// About Page Hero Override
+.about-hero {
+  .hero-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/figure (44).jpg');
+  }
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 // Sections

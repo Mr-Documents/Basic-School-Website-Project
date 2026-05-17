@@ -157,14 +157,14 @@ img {
   width: 100%;
   padding: 6rem 2rem;
 }
-.hero .hero-banner .hero-content h1, .hero .hero-banner .hero-content p {
+.hero .hero-banner .hero-content h1, .hero .hero-banner .hero-content h2, .hero .hero-banner .hero-content p {
   color: #FFFFFF;
 }
 .hero .hero-content {
   max-width: 800px;
   margin: 0 auto;
 }
-.hero .hero-content h1 {
+.hero .hero-content h1, .hero .hero-content h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #1E1E1E;
@@ -174,12 +174,19 @@ img {
   color: #666666;
   margin-bottom: 2rem;
 }
-.hero .hero-content .hero-image {
+
+.about-hero .hero-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/figure (44).jpg");
+}
+
+.hero-image {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   height: auto;
-  margin: 0 auto 2rem;
-  border-radius: 8px;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 .section {
