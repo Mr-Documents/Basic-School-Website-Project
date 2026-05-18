@@ -492,6 +492,16 @@ img {
   margin: 0.6rem 0;
 }
 
+.more-link {
+  color: #114AA3;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.more-link:hover {
+  color: #0D3B82;
+}
+
 .column-layout {
   display: grid;
   grid-template-columns: 1fr 1.5fr;

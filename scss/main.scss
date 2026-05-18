@@ -522,6 +522,18 @@ img {
   p { margin: 0.6rem 0; }
 }
 
+// General "More" link style
+.more-link {
+  color: $main-blue;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-blue;
+  }
+}
+
 // Professional Column Layout Logic
 .column-layout {
   display: grid;
@@ -576,6 +588,11 @@ img {
 // Media Hub Section (Clean Professional Styling)
 .media-hub-section {
   background: $light-blue;
+
+  .section-intro {
+    h2 { color: $main-blue; }
+    p { color: $gray-text; }
+  }
 
   .media-feature-item {
     background: $white;
