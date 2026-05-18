@@ -492,6 +492,99 @@ img {
   margin: 0.6rem 0;
 }
 
+.column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+  text-align: left;
+}
+.column-layout .section-intro h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.column-layout .section-intro p {
+  text-align: left;
+  margin-left: 0;
+  max-width: 100%;
+}
+@media (max-width: 992px) {
+  .column-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .column-layout .section-intro {
+    text-align: center;
+  }
+  .column-layout .section-intro h2 {
+    text-align: center;
+  }
+  .column-layout .section-intro p {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.vision-pathways {
+  background-image: linear-gradient(rgba(17, 74, 163, 0.85), rgba(17, 74, 163, 0.85)), url("../images/figure (49).jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #FFFFFF;
+}
+.vision-pathways h2, .vision-pathways p {
+  color: #FFFFFF !important;
+}
+.vision-pathways .academic-pathway-item {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease;
+}
+.vision-pathways .academic-pathway-item h3 {
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+.vision-pathways .academic-pathway-item p {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  margin: 0;
+  font-size: 0.95rem;
+}
+.vision-pathways .academic-pathway-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.media-hub-section {
+  background: #EAF2FF;
+}
+.media-hub-section .media-feature-item {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid #114AA3;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.media-hub-section .media-feature-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+.media-hub-section .media-feature-item h3 {
+  color: #114AA3;
+  margin-bottom: 0.5rem;
+}
+.media-hub-section .media-feature-item p {
+  text-align: left;
+  margin: 0;
+  color: #666666;
+}
+
 .footer {
   background: #1E1E1E;
   color: #FFFFFF;
@@ -608,6 +701,10 @@ img {
   .contact-container {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
+  }
+  .academic-pathways-container, .media-hub-features {
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
   .contact-image, .contact-form-wrapper {
