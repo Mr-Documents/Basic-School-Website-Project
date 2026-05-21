@@ -796,6 +796,10 @@ img {
       text-align: center;
     }
 
+    .footer-logo-area img {
+      margin: 0 auto 1.5rem;
+    }
+
     .footer-column h3::after { left: 50%; transform: translateX(-50%); }
     .footer-contact p { justify-content: center; }
 

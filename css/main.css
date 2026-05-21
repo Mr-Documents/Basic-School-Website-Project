@@ -790,6 +790,9 @@ img {
     gap: 2.5rem;
     text-align: center;
   }
+  .footer .footer-logo-area img {
+    margin: 0 auto 1.5rem;
+  }
   .footer .footer-column h3::after {
     left: 50%;
     transform: translateX(-50%);
