@@ -520,6 +520,48 @@ img {
   color: #4E4E4E;
   line-height: 1.8;
   p { margin: 0.6rem 0; }
+
+  i {
+    color: $main-blue;
+    margin-right: 0.8rem;
+    width: 20px;
+    text-align: center;
+  }
+}
+
+// Contact Info Section (Home Page)
+.contact-info-section {
+  text-align: center;
+  border-top: 1px solid $border-gray;
+
+  .contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .info-item {
+    i {
+      font-size: 2rem;
+      color: $main-blue;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: $dark-text;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin: 0;
+      color: $gray-text;
+    }
+  }
 }
 
 // General "More" link style
@@ -614,43 +656,55 @@ img {
 .footer {
   background: $dark-text;
   color: $white;
-  text-align: left;
-  padding: 2rem;
+  padding: 4rem 2rem 1rem;
   
   &-content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 2rem;
-    flex-wrap: wrap;
+    gap: 3rem;
   }
 
-  &-logo-image {
-    img { max-width: 100px; }
-  }
+  .footer-column {
+    h3 {
+      color: $white;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
 
-  &-links {
-    flex: 0 1 auto;
-    min-width: 200px;
-    h3 { margin-bottom: 1rem; }
-    ul { list-style: none; }
-    li { margin-bottom: 0.5rem; }
-    a { 
-      color: #CCCCCC; 
-      text-decoration: none; 
-      transition: color 0.3s;
-      &:hover { color: $main-blue; }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 2px;
+        background: $main-blue;
+      }
     }
   }
 
-  &-message {
-    flex: 0 1 auto;
-    max-width: 400px;
-    margin-left: auto;
-    text-align: right;
-    p { color: #CCCCCC; margin: 0; }
+  .footer-logo-area {
+    img { max-width: 120px; margin-bottom: 1rem; }
+    p { font-size: 0.9rem; line-height: 1.6; color: #BBB; }
+  }
+
+  .footer-links {
+    ul { list-style: none; }
+    li { margin-bottom: 0.8rem; }
+    a { color: #BBB; text-decoration: none; transition: 0.3s; &:hover { color: $white; padding-left: 5px; } }
+  }
+
+  .footer-media {
+    p { font-size: 0.9rem; color: #BBB; margin-bottom: 1rem; }
+    .media-tags { font-weight: 600; color: $white; font-size: 0.85rem; }
+  }
+
+  .footer-contact {
+    p { color: #BBB; font-size: 0.9rem; margin-bottom: 1rem; display: flex; align-items: flex-start; gap: 10px; }
+    i { color: $main-blue; margin-top: 4px; }
   }
 
   &-copyright {
@@ -736,19 +790,14 @@ img {
   .contact-image, .contact-form-wrapper { width: 100%; }
 
   .footer {
-    text-align: center;
-
     &-content {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      text-align: center;
     }
 
-    &-message {
-      text-align: center;
-      max-width: 100%;
-      margin-left: 0;
-    }
+    .footer-column h3::after { left: 50%; transform: translateX(-50%); }
+    .footer-contact p { justify-content: center; }
 
     &-copyright {
       text-align: center;
