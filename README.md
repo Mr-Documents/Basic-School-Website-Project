@@ -62,4 +62,4 @@ Upload all files to your web hosting service. Ensure the server supports HTTPS f
 - Modify colors in `scss/main.scss` if needed
 - Add more pages or sections as required
 
-For any questions or support, contact the developer.
+For any questions or support, contact me.
