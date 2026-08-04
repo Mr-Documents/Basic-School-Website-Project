@@ -1,24 +1,13 @@
-// Contact form submission via EmailJS: notifies the school, then auto-replies to the sender.
+// Contact form submission via Web3Forms.
 (function () {
-    const EMAILJS_PUBLIC_KEY = 'b2fe5DOrJZSFLP0a5';
-    const EMAILJS_SERVICE_ID = 'service_q0i2y8g';
-    const EMAILJS_TEMPLATE_NOTIFY = 'template_c4hs2ar';
-    const EMAILJS_TEMPLATE_AUTOREPLY = 'template_m0mitx4';
-
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('contact-form');
         const messageBox = document.getElementById('form-message');
         if (!form || !messageBox) return;
 
-        if (typeof emailjs === 'undefined') {
-            console.error('EmailJS SDK failed to load; contact form cannot send messages.');
-            return;
-        }
-
-        emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-
         const submitBtn = form.querySelector('button[type="submit"]');
         const submitBtnDefaultText = submitBtn.textContent;
+        let isSubmitting = false;
 
         function showMessage(text, type) {
             messageBox.textContent = text;
@@ -34,31 +23,38 @@
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
+            if (isSubmitting) return;
+
             if (!form.checkValidity()) {
                 form.reportValidity();
                 return;
             }
 
+            isSubmitting = true;
             setSending(true);
             messageBox.style.display = 'none';
 
-            emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_NOTIFY, form)
-                .then(function () {
-                    return emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_AUTOREPLY, form)
-                        .catch(function (err) {
-                            // The school already has the message; a failed auto-reply shouldn't block that success.
-                            console.error('Auto-reply failed to send:', err);
-                        });
-                })
-                .then(function () {
-                    showMessage("Thank you! Your message has been sent. We've received it and will get back to you soon.", 'success');
-                    form.reset();
+            fetch(form.action, {
+                method: 'POST',
+                headers: { Accept: 'application/json' },
+                body: new FormData(form)
+            })
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    if (data.success) {
+                        showMessage("Thank you! Your message has been sent. We've received it and will get back to you soon.", 'success');
+                        form.reset();
+                    } else {
+                        console.error('Web3Forms submission failed:', data);
+                        showMessage('Sorry, something went wrong and your message could not be sent. Please try again or email us directly.', 'error');
+                    }
                 })
                 .catch(function (err) {
                     console.error('Message failed to send:', err);
                     showMessage('Sorry, something went wrong and your message could not be sent. Please try again or email us directly.', 'error');
                 })
                 .finally(function () {
+                    isSubmitting = false;
                     setSending(false);
                 });
         });

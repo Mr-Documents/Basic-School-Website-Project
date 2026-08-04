@@ -44,7 +44,9 @@
             </div>
             <div class="contact-form-wrapper">
                 <div class="contact-form">
-                    <form id="contact-form" novalidate>
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                        <input type="hidden" name="access_key" value="a244e8e1-306f-4366-b7e6-f27b0fb31a96">
+                        <input type="checkbox" name="botcheck" style="display: none;" tabindex="-1" autocomplete="off">
                         <input id="contact-name" name="name" type="text" placeholder="Full Name" required>
                         <input id="contact-email" name="email" type="email" placeholder="Email Address" required>
                         <input id="contact-subject" name="subject" type="text" placeholder="Subject" required>
@@ -99,7 +101,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
 </body>
