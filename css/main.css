@@ -483,6 +483,23 @@ img {
   margin-top: 0.5rem;
 }
 
+#form-message {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+#form-message.success {
+  background: rgba(30, 123, 52, 0.1);
+  color: #1E7B34;
+  border: 1px solid rgba(30, 123, 52, 0.3);
+}
+#form-message.error {
+  background: rgba(214, 40, 40, 0.1);
+  color: #D62828;
+  border: 1px solid rgba(214, 40, 40, 0.3);
+}
+
 .contact-details {
   max-width: 100%;
   color: #4E4E4E;

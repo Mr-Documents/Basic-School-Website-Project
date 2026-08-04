@@ -40,12 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Form submission (dummy)
-document.addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-});
-
 // Dynamic copyright year
 document.addEventListener('DOMContentLoaded', function() {
     const year = new Date().getFullYear();
