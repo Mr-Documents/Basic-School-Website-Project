@@ -1,6 +1,6 @@
 # Nana Kotaa School Complex Website
 
-A simple, professional, and mobile-friendly website for Nana Kotaa School Complex
+A simple, professional, and mobile-friendly website for Nana Kotaa School Complex.
 
 ## Technologies Used
 - HTML5
@@ -51,7 +51,7 @@ A simple, professional, and mobile-friendly website for Nana Kotaa School Comple
 - Responsive design
 - Simple animations (fade-in on scroll)
 - Clean, professional layout
-- Mobile-friendly navigation
+- Mobile-friendly navigation.
 
 ## Deployment
 Upload all files to your web hosting service. Ensure the server supports HTTPS for security.
