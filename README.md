@@ -45,7 +45,7 @@ A simple, professional, and mobile-friendly website for Nana Kotaa School Comple
 - Dark Text: #1E1E1E
 - Gray Text: #666666
 - Border Gray: #D9D9D9
-- Accent Red: #D62828
+- Accent Red: #D62828.
 
 ## Features
 - Responsive design
